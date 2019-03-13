@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">调度数据监控</string>
+    <string name="choice_group_hint">请选择分组查看数据</string>
+    <string name="hint_message">正在检查网络设置&#8230;请稍等</string>
+    <string name="loading_message">正在读取数据&#8230;请稍等</string>
+    <string name="detail_button">详情</string>
+    <string name="add_to_favorite">自选</string>
+    <string name="cancel_button">取消</string>
+    <string name="delete_from_favorite">删除自选</string>
+    <string name="long_click_hint">指标：【压力】>=0.14 MPa,余氯、浊度&#8230;</string>
+    <string name="detail_message">6&lt;=【PH】&lt;=9 mg/L\n【溶解氧】>=6 mg/L\n【氨氮】&lt;=0.5 mg/L\n【压力】>=0.14 MPa(国标)\n【压力】>=0.18 MPa(企标)\n【浊度】&lt;=1 NTU(国标)\n\n【出口余氯】>=&#160;&#160;0.3 mg/L(国标)\n【末梢余氯】>=0.05 mg/L(国标)\n【余氯上限】&lt;1 mg/L(地标)\n【余氯上限】&lt;4 mg/L(国标)</string>
+    <string name="empty_string"/>
+    <string name="amount">汇总</string>
+    <string name="produce_water_total">产水统计</string>
+    <string name="chart">图表</string>
+    <string name="data">数据</string>
+    <string name="month_name">月份</string>
+	<string name="year">年</string>
+	<string name="month">月</string>
+    <string name="day">日</string>
+	<string name="today">今日</string>
+	<string name="yesterday">昨日</string>
+	<string name="compare">对比</string>
+	<string name="search">查询</string>
+	<string name="choice_year">选择年份</string>
+	<string name="choice_month">选择月份</string>
+	<string name="ok">确定</string>
+	<string name="under_water">地下水</string>
+	<string name="surface_water">地表水</string>
+	<string name="total_water">总水量</string>
+	<string name="query">查询</string>
+	<string name="choice_date">请选择日期</string>
+    <string name="total_value">累计值：</string>
+    <string name="average_value">平均值：</string>
+    <string name="min_value">最小值：</string>
+    <string name="max_value">最大值：</string>
+    <string name="sample_value">采样</string>
+    <string name="further">你要做时空机器去未来吗？ -_- , 告诉你一个好消息：穿越本系统也不支持！！</string>
+    <string name="refresh_time_hint">20秒后自动进行下一次更新</string>
+    <string name="indicate_name">指标说明</string>
+    <string name="close">关闭</string>
+    <string name="self_choice">自选</string>
+    <string name="add_success">添加成功</string>
+    <string name="del_success">删除成功</string>
+    <string name="check_network">检查网络是否可用</string>
+    <string name="starting">正在启动...请稍等</string>
+    <string name="no_network">没有可以使用的网络, 请打开网络后再试</string>
+    <string name="exit">退出</string>
+    <string name="diff_value">差值</string>
+</resources>

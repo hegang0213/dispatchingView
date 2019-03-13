@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <gradient android:startColor="#bf00ff00"
+                android:centerColor="#44ffffff" 
+                android:endColor="#bf00ff00"
+                android:angle="270.0"/> 
+        </shape>
+    </item>
+    <item android:top="1dp" android:bottom="1dp" android:left="1dp" android:right="1dp">
+		<bitmap android:src="@drawable/green_twill" android:tileMode="repeat" />
+    </item>
+    <item android:top="1dp" android:bottom="1dp" android:left="1dp" android:right="1dp">
+        <shape>
+            <gradient android:startColor="#9f00ff00" 
+                android:endColor="#22000000" 
+                android:angle="270.0"/> 
+            <padding android:left="8dp" android:right="8dp" android:top="3dp" android:bottom="3dp"/>
+            <corners android:radius="0dp" />
+        </shape>
+    </item>
+</layer-list>

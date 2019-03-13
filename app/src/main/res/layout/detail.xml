@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_repeat">
+    <!-- title bar -->
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header" />
+    <!-- top bar -->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/detail_topbar_background_repeat"
+        android:orientation="horizontal">
+        <!-- today -->
+        <Button 
+            android:id="@+id/todayButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3sp"
+            android:layout_marginRight="5sp"
+            android:layout_marginTop="2sp"
+            android:layout_alignParentLeft="true"
+            android:textColor="#fff"
+            android:paddingLeft="3sp"
+            android:drawableLeft="@drawable/calendar"
+            android:background="@drawable/detail_green_button_selected_background"/>
+        <!-- yesterday -->
+        <Button 
+            android:id="@+id/yesterdayButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:layout_toRightOf="@id/todayButton"
+            android:layout_marginRight="5sp"
+            android:layout_marginTop="2sp"
+            android:background="@drawable/detail_green_button_background"/>
+        <!-- custom date -->
+		<Button 
+            android:id="@+id/choiceDateButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:layout_toRightOf="@id/yesterdayButton"
+			android:layout_marginRight="8sp"
+			android:layout_marginTop="2sp"
+			android:drawableLeft="@drawable/calendar_preferences"
+			android:paddingLeft="3sp"
+            android:background="@drawable/detail_green_button_background"/>
+		<TextView 
+		    android:id="@+id/dateTextView"
+		    android:textColor="#ff00ff00"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentRight="true"
+		    android:paddingTop="2sp"
+		    android:layout_marginRight="3sp" />
+    </RelativeLayout>
+    <!-- total -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0sp"
+        android:paddingTop="5sp"
+        android:paddingRight="5sp"
+        android:paddingBottom="5sp"
+        android:orientation="vertical"
+        android:layout_weight="1">
+		<!-- title -->
+        <TextView
+            android:id="@+id/amountTitleTextView"
+            android:text="@string/amount"
+            android:textColor="#fff"
+            android:drawableLeft="@drawable/data"
+            android:drawablePadding="3sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="3sp"
+            android:background="@drawable/detail_category_background" 
+            />
+        <TableLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="3sp"
+            android:layout_marginLeft="5sp"
+            android:layout_marginBottom="10sp"
+            android:orientation="vertical">
+            <TableRow android:layout_width="fill_parent">
+                <!-- Amount -->
+		        <TextView 
+		            android:id="@+id/amountTextView"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:textColor="#FFF"
+					android:paddingLeft="3sp"
+	            	android:paddingRight="3sp"
+		            android:layout_marginRight="10sp"
+		            android:layout_weight="1"
+		            android:background="@drawable/detail_content_background"/>
+		        <!-- Average -->
+	            <TextView 
+	            	android:id="@+id/averageTextView"
+	            	android:layout_width="fill_parent"
+	            	android:layout_height="wrap_content"
+	            	android:textColor="#FFF"
+	            	android:paddingLeft="3sp"
+	            	android:paddingRight="3sp"
+	            	android:layout_weight="1"
+	            	android:background="@drawable/detail_content_background"
+	            	/>
+            </TableRow >
+            <TableRow android:layout_width="fill_parent" android:layout_marginTop="3sp">
+                <!-- Min -->
+	            <TextView 
+	            	android:id="@+id/minTextView"
+	            	android:layout_width="fill_parent"
+	            	android:layout_height="wrap_content"
+	            	android:textColor="#FFF"
+					android:paddingLeft="3sp"
+	            	android:paddingRight="3sp"
+	            	android:layout_marginRight="10sp"
+	            	android:layout_weight="1"
+	            	android:background="@drawable/detail_content_background"/>
+	            <!-- Max -->
+	            <TextView 
+	            	android:id="@+id/maxTextView"
+	            	android:layout_width="fill_parent"
+	            	android:layout_height="wrap_content"
+	            	android:paddingLeft="3sp"
+	            	android:paddingRight="3sp"
+	            	android:textColor="#FFF"
+	            	android:layout_weight="1"
+	            	android:background="@drawable/detail_content_background"/>
+            </TableRow>
+        </TableLayout>
+       	<!-- Count -->
+        <TextView 
+          	android:id="@+id/countTextView"
+           	android:layout_width="wrap_content"
+           	android:layout_height="wrap_content"
+            android:paddingLeft="3sp"
+            android:drawableLeft="@drawable/chart"
+            android:drawablePadding="3sp"
+            android:background="@drawable/detail_category_background" 
+           	android:textColor="#FFF"/>
+        <!-- Chart ImageView -->
+        <ImageView 
+            android:id="@+id/imageView"
+            android:contentDescription="@string/empty_string"
+            android:layout_width="fill_parent"
+            android:layout_margin="3sp"
+            android:layout_height="wrap_content" />
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:cacheColorHint="#00000000"
+            android:visibility="gone"/>            
+    </LinearLayout>
+    <include
+		layout="@layout/progress"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+	<TableRow 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@drawable/bottombar_background_repeat"
+	    android:layout_gravity="center_vertical">
+        <Button 
+		    android:layout_width="0dp"
+		    android:layout_height="fill_parent"
+		    android:textColor="#fff"
+		    android:background="#00ffffff" 
+		    android:layout_weight="1"/>
+		<Button 
+		    android:layout_width="0dp"
+		    android:layout_height="fill_parent"
+		    android:textColor="#fff"
+		    android:background="#00ffffff" 
+		    android:layout_weight="1"/>
+		<Button 
+		    android:id="@+id/chartButton"
+		    android:layout_width="0dp"
+		    android:layout_height="fill_parent"
+		    android:textColor="#fff"
+		    android:background="@drawable/bottombar_selected_background" 
+			android:layout_weight="1"/>
+		<Button 
+		    android:id="@+id/dataButton"
+		    android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+		    android:textColor="#fff"
+		    android:background="#00ffffff" 
+		    android:layout_weight="1"/>
+	</TableRow>
+</LinearLayout>
